@@ -9,7 +9,7 @@ function Login() {
   const [load, setLoad] = useState(false);
   const [err, setErr] = useState("");
   const loggContext = useContext(logged);
-  const [notLogg_Redirect, setRedir] = useContext(notLogRedirect);
+  const [notLogg_Redirect] = useContext(notLogRedirect);
 
   const errors = document.querySelector("#errors");
 

@@ -1,10 +1,10 @@
 // @ts-nocheck
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
-import { notLogRedirect, logged } from "./Contexts";
+import {  logged } from "./Contexts";
 
 function Dashboard() {
-  const [log, setLog] = useContext(logged);
+  const [log] = useContext(logged);
   const [current, setCurr] = useState({});
   useEffect(() => {
     let token = "";

@@ -1,14 +1,13 @@
 // @ts-nocheck
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./register.scoped.css";
 
 function Register() {
   const [user, setUser] = useState({});
   const [load, setloading] = useState(false);
   const [message, setMessage] = useState("");
-  const pass = document.getElementById("message");
-
+ 
   const saveData = async (e) => {
     setloading(!load);
 

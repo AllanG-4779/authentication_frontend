@@ -24,7 +24,7 @@ function Register() {
     // }
 
     axios
-      .post("http://localhost:3002/register", user)
+      .post("https://jwt-auth-node-app.herokuapp.com/register", user)
       .then((succ) => {
         setloading(load);
         if (succ.data) {

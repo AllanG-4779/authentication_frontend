@@ -12,7 +12,7 @@ function Dashboard() {
       token = JSON.parse(localStorage.getItem("logged")).token;
     }
     axios
-      .get("http://localhost:3002/dashboard", {
+      .get("https://jwt-auth-node-app.herokuapp.com/dashboard", {
         headers: {
           Authorization: `Bearer ${token}
             

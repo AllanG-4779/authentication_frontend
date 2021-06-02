@@ -20,7 +20,9 @@ function Login() {
     //make a call to the api
 
     axios
-      .post(`http://localhost:3002/login/${user.email_phone}/${user.password}`)
+      .post(
+        `https://jwt-auth-node-app.herokuapp.com/login/${user.email_phone}/${user.password}`
+      )
       .then((success) => {
         setLoad(false);
         if (success.data) {

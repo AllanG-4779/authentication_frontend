@@ -21,7 +21,9 @@ function Login() {
 
     axios
       .post(
-        `https://jwt-auth-node-app.herokuapp.com/login/${user.email_phone}/${user.password}`
+        `https://jwt-auth-node-app.herokuapp.com/${user.email_phone}/${user.password}`,{headers:{
+          "Access-Control-Allow-Origin":"*"
+        }}
       )
       .then((success) => {
         setLoad(false);
@@ -43,7 +45,7 @@ function Login() {
 
         if (error.response) {
           errors.className = "alert alert-danger";
-          console.log(error);
+          console.log("the error is " ,error);
           setErr(error.response.data.Message);
         }
         setTimeout(() => {
@@ -126,8 +128,9 @@ function Login() {
             <p id="log" className="alert alert-warning ">
               You must log in to view the requested resourxw!
             </p>
-            
-          ): " "}
+          ) : (
+            " "
+          )}
         </div>
       </div>
     </div>
